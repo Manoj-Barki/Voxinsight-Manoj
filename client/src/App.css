@@ -1,0 +1,155 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212;
+}
+
+.topbar{
+  width: 100vw;
+  min-height: 50px;
+  height: 5vw;
+  background-color: black;
+  align-self:flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo{
+  min-height: 45px;
+  height: 4.5vw;
+  margin-left: 0.8vw;
+}
+
+.title{
+  min-height: 30px;
+  height: 3vw;
+  align-self: flex-end;
+  margin-bottom: 0.5vw;
+  margin-left: 1vw;
+}
+
+.profile{
+  position:absolute;
+  top: 1.3vw;
+  right: 15px;
+  margin-right: 5px;
+  min-height: 30px;
+  height: 3vw;
+}
+
+.profile:hover{
+  cursor: pointer;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 65vw;
+  align-items: center;
+  padding-left: 5%;
+  margin-top: 45px;
+}
+
+h1{
+  font-size: 25px;
+  padding-left: 2%;
+  
+}
+
+.lower{
+  display: flex;
+  flex-direction: row;
+}
+
+.loading{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(360deg);
+  }
+
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.loadOut{
+  height: 160px;
+  width: 160px;
+  border-radius: 80px;
+  background-image: conic-gradient( #a100ff 5%, #ff00f7 10%, #121212 15%, #121212 );
+  animation: rotate 0.8s linear(0.97-4.71%, 0.93 4.26%, 0.89 10.92%, 0.84 18.27%, 0.81 25.07%, 0.75 31.54%, 0.71 39.45%, 0.68 46.43%, 0.67 53.12%, 0.62 59.21%, 0.58 62.09%, 0.52 68.86%, 0.46 71.21%, 0.46 70.04%, 0.43 75.33%, 0.37 80.16%, 0.39 80.74%, 0.34 81.88%, 0.31 86.52%, 0.2 91.69%, 0.12 97.71%,-0.05 112.27%, 0.05 103.44%,-0.19 104.62%, 0.01 109.82%, 0.25 89.23%,-0.07 103.35%,-0.09 102.76%,-0.03 102.17%,-0.11 102.76%,-0.07 104.52%,-0.24 112.17%,-0.14 107.65%) infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.loadIn{
+  height: 156px;
+  width: 156px;
+  border-radius: 78px;
+  background-color: #121212;
+  transform: rotate(360deg);
+  transition: transform 1.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  align-self: center;
+  justify-self: center;
+}
+
+.conRight{
+  height: calc(100vh - 5vw);
+  width: 50vw;
+}
+
+.conRight>div{
+  background-color: #1f1f1f;
+  height: 45%;
+  margin: 20px;
+  width: 59%;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph{
+  margin: 35px;
+  height: 75%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* .pie{
+  height: 70%;
+  width: 50%;
+  border-radius: 50%;
+  background-image: conic-gradient(red 39%, red 0%, yellow 2%, yellow 0%, rgb(3, 227, 3) 59%, rgb(3, 227, 3) 0%);
+} */
