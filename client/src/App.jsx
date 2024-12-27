@@ -16,9 +16,6 @@ function App() {
   const [totRev, setRev] = useState(null);
   const [posScore, setposScore] = useState(null);
   const [negScore, setnegScore] = useState(null);
-  const [posPerc, setPosPerc] = useState();
-  const [negPerc, setNegPerc] = useState();
-  const [neuPerc, setNeuPerc] = useState();
  
   useEffect( ()=> {
 
@@ -30,13 +27,12 @@ function App() {
       const response = await axios.get("http://localhost:5000/api");
       const result = response.data;
       setData(result); 
-      setPos(data.PosRevs);
-      setNeg(data.NegRevs);
-      setNeu(data.NeuRevs);
-      setRev(data.numRevs);
-      setposScore(data.PosScore);
-      setnegScore(data.NegScore);
-      console.log(posRev + " " +  negRev + " " +  neuRev + " " +  posScore + " " +  negScore);
+      setPos(result.PosRevs);
+      setNeg(result.NegRevs);
+      setNeu(result.NeuRevs);
+      setRev(result.numRevs);
+      setposScore(result.PosScore);
+      setnegScore(result.NegScore);
 
     } 
     catch(err) 
