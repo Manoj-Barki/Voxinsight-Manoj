@@ -40,7 +40,12 @@ app.get("/api", async(req, res) => {
         }
         productData[i]={score: x, review: rev};
     })
-    return res.json({ TotScore: totalScore, NumRevs : numRev, PosRevs : posRev, NegRevs: negRev, NeuRevs: neuRev, PosScore: posScore, NegScore: negScore})
+    $('#title').each((i, productname) => {
+        productName = $(productname).find('span').text();
+        // console.log(productName)
+    });
+    return res.json({ ProductName: productName, TotScore: totalScore, NumRevs : numRev, PosRevs : posRev, NegRevs: negRev, NeuRevs: neuRev, PosScore: posScore, NegScore: negScore})
+
 })
 
 app.listen(5000, () => {console.log("Server is listening on port 5k")})
