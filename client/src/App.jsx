@@ -34,6 +34,7 @@ function App() {
       setRev(result.numRevs);
       setposScore(result.PosScore);
       setnegScore(result.NegScore);
+      setProName(result.ProductName);
 
     } 
     catch(err) 
@@ -60,7 +61,7 @@ function App() {
       </div>}
       {!loading && 
       <div className='lower'>
-        <Content/>
+        <Content name={proName}/>
         <div className='conRight'>
           <div>
             <div className='graph'>
