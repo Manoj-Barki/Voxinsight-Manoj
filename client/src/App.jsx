@@ -16,6 +16,7 @@ function App() {
   const [totRev, setRev] = useState(null);
   const [posScore, setposScore] = useState(null);
   const [negScore, setnegScore] = useState(null);
+  const [proName, setProName] = useState();
  
   useEffect( ()=> {
 
